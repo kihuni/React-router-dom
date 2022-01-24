@@ -1,19 +1,33 @@
 import "./App.css";
-import { Link } from "./react-router-dom";
+import { Home } from "./component/Home";
+import { Category } from "./component/Category";
+import { Products } from "./component/Products";
+import { Link, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <div>
-      <h1>BookKeeper</h1>
-
-      <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem",
-        }}
-      >
-        <Link to="/invoices">Invoices</Link> |{" "}
-        <Link to="/expenses">Expenses</Link>
+      <nav className="nav-bar">
+        <ul className="nav">
+          <li>
+            <Link to="./">Home</Link>
+          </li>
+          <li>
+            <Link to="/category">Category</Link>
+          </li>
+          <li>
+            <Link to="/products">Products</Link>
+          </li>
+        </ul>
       </nav>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/category">
+        <Category />
+      </Route>
+      <Route path="/products">
+        <Products />
+      </Route>
     </div>
   );
 }
