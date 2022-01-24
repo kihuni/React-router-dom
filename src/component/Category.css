@@ -1,0 +1,15 @@
+.category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 130px;
+}
+.category li{
+    list-style: none;
+    margin-right: 80px;
+}
+
+h3{
+    text-align: center;
+    padding-top: 60px;
+}

@@ -1,7 +1,7 @@
 import "./App.css";
 import { Home } from "./component/Home";
 import Category  from "./component/Category";
-import { Products } from "./component/Products";
+import Products  from "./component/Products";
 import { Link, Route, Switch } from "react-router-dom";
 function App() {
   return (
