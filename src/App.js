@@ -1,6 +1,6 @@
 import "./App.css";
 import { Home } from "./component/Home";
-import { Category } from "./component/Category";
+import Category  from "./component/Category";
 import { Products } from "./component/Products";
 import { Link, Route, Switch } from "react-router-dom";
 function App() {
@@ -19,6 +19,7 @@ function App() {
           </li>
         </ul>
       </nav>
+      <Switch>
       <Route exact path="/">
         <Home />
       </Route>
@@ -28,6 +29,7 @@ function App() {
       <Route path="/products">
         <Products />
       </Route>
+      </Switch>
     </div>
   );
 }
